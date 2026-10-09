@@ -10,7 +10,7 @@ const NAV: { to: string; label: string; mobileOnly?: boolean }[] = [
   { to: '/zenderlijst/', label: 'Zenderlijst' },
   { to: '/apparaten/', label: 'Apparaten' },
   { to: '/hoe-bestellen/', label: 'Hoe bestellen' },
-  { to: '/iptv-vs-kabel/', label: 'IPTV vs kabel', mobileOnly: true },
+  { to: '/iptv-vs-kabel/', label: 'IPTV vs kabel' },
   { to: '/veelgestelde-vragen/', label: 'FAQ' },
   { to: '/contact/', label: 'Contact' },
 ];
@@ -72,16 +72,6 @@ export const Navbar: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <Link
-            to="/iptv-abonnement/"
-            className="fx-press fx-holo flex h-11 shrink-0 flex-col items-center justify-center whitespace-nowrap rounded-full bg-white px-2.5 leading-none text-[#5b6478] sm:h-12 sm:flex-row sm:gap-1.5 sm:px-4 xl:hidden 2xl:flex"
-            aria-label="Abonnementen: 12 maanden vanaf €58,99"
-          >
-            <span className="text-[10px] font-semibold sm:text-[13px]">
-              <span className="hidden sm:inline">12 mnd </span>vanaf
-            </span>
-            <strong className="font-display mt-0.5 text-[14px] font-bold text-[#0E1526] sm:mt-0 sm:text-[15px]">€58,99</strong>
-          </Link>
           <a
             href={getWhatsAppUrl('Hoi IPTV Koop 4K, ik heb interesse in een abonnement. (ref: NAV-mobile-icon)')}
             target="_blank"
