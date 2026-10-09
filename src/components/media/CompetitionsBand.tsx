@@ -22,7 +22,7 @@ export const CompetitionsBand: React.FC = () => {
         {duplicated.map((comp, idx) => (
           <div
             key={idx}
-            className="h-12 sm:h-14 shrink-0 flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100"
+            className="h-12 sm:h-14 shrink-0 flex items-center justify-center transition-transform duration-500 hover:scale-110"
           >
             <img
               src={comp.src}

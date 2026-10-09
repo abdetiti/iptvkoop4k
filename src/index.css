@@ -199,3 +199,19 @@ body { background: var(--fx-base); }
 .fx-inner a.rounded-2xl:hover, .fx-inner a.rounded-3xl:hover { transform: translateY(-4px); box-shadow: 0 0 0 1px rgba(14,21,38,.06), 0 30px 60px -30px rgba(14,21,38,.4); }
 .fx-inner h1 { letter-spacing: -0.04em; }
 .fx-inner section { background-color: transparent !important; }
+
+/* ---------- header details ---------- */
+.fx-navline {
+  background: linear-gradient(90deg, transparent, var(--fx-orange), var(--fx-lilac), var(--fx-cobalt), transparent);
+  background-size: 200% 100%;
+  opacity: .55;
+  animation: fx-navline 8s linear infinite;
+}
+@keyframes fx-navline { from { background-position: 0% 0; } to { background-position: 200% 0; } }
+.fx-logo-glow {
+  background: radial-gradient(closest-side, rgba(255, 90, 31, .28), transparent);
+  opacity: 0; transition: opacity .5s;
+  animation: fx-glow 4s ease-in-out infinite;
+}
+@keyframes fx-glow { 0%, 100% { opacity: .15; transform: scale(.9); } 50% { opacity: .6; transform: scale(1.05); } }
+@media (prefers-reduced-motion: reduce) { .fx-navline, .fx-logo-glow { animation: none; } }

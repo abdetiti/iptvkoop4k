@@ -36,7 +36,7 @@ export const CompetitionStrip: React.FC = () => (
             src={`/images/sport-competitions/comp-${c}.webp`}
             alt={i < COMPS.length ? COMP_ALT[c] : ''}
             loading="lazy"
-            className="h-full w-full rounded-xl object-cover grayscale transition duration-500 group-hover:grayscale-0"
+            className="h-full w-full rounded-xl object-cover transition duration-500 group-hover:scale-110"
           />
         </div>
       ))}
