@@ -1,0 +1,7 @@
+{
+  "name": "IPTV Koop 4K",
+  "description": "IPTV kopen in Nederland. Haarscherpe 4K streams op al je apparaten. Eenvoudig bestellen via WhatsApp. 12 maanden vanaf €58,99.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

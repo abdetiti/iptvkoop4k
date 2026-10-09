@@ -1,31 +1,20 @@
-# IPTV 8K Nederland — site Next.js
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Site de iptv8knederland.com, prêt pour Vercel. Toutes les pages sont pré-rendues en HTML (bon pour le SEO).
+# Run and deploy your AI Studio app
 
-## Où modifier quoi
+This contains everything you need to run your app locally.
 
-| Quoi | Fichier |
-|---|---|
-| **Prix des abonnements** (Standard / Premium, 1 à 4 appareils) | `data/prices.ts` — mettre le prix total à la place de `null` |
-| **Avantages Premium** | `data/prices.ts` → `PREMIUM_EXTRAS` |
-| Questions / réponses de la FAQ | `data/faq.ts` |
-| Pages légales | `data/legal.ts` |
-| Numéro WhatsApp | `utils/whatsapp.ts` → `WHATSAPP_PHONE` |
-| Images | `public/images/` + `images.ts` |
-| Titre et description Google de l'accueil | `app/layout.tsx` |
-| Anciennes adresses WordPress → nouvelles | `next.config.ts` |
+View your app in AI Studio: https://ai.studio/apps/cc859ea4-e97c-4d63-bd5c-b78b4140b5a1
 
-## Mise en ligne sur Vercel
+## Run Locally
 
-1. Créer un dépôt GitHub et y envoyer ce dossier.
-2. Sur vercel.com : **Add New → Project**, importer le dépôt (Vercel détecte Next.js tout seul), **Deploy**.
-3. **Settings → Environment Variables** : ajouter `NEXT_PUBLIC_GA_ID` = l'ID GA4 (G-…), puis redéployer.
-4. **Settings → Domains** : ajouter `iptv8knederland.com` et `www.iptv8knederland.com`, puis créer chez Hostinger les enregistrements DNS que Vercel indique.
-5. Search Console : renvoyer `sitemap.xml`.
+**Prerequisites:**  Node.js
 
-## Développement local
 
-```
-npm install
-npm run dev
-```
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
