@@ -145,7 +145,7 @@ export const FaqPage: React.FC = () => {
             Onze Nederlandstalige supportmedewerkers beantwoorden al je vragen direct via WhatsApp.
           </p>
           <WhatsAppButton
-            message="Hoi IPTV Koop 4K, ik heb een vraag die niet in de FAQ staat. (ref: FAQ-vraag)"
+            message="Hoi IPTV Koop 4K, ik heb een vraag die niet in de FAQ staat."
             context={{ page: '/veelgestelde-vragen/', ref: 'FAQ-vraag' }}
             variant="primary"
           >

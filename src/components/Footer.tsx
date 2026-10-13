@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
             </div>
             <div className="pt-2">
               <a
-                href="https://wa.me/447577339206?text=Hoi%20IPTV%20Koop%204K%2C%20ik%20heb%20een%20vraag%20over%20een%20abonnement.%20(ref%3A%20FOOTER)"
+                href="https://wa.me/447428914603?text=Hoi%20IPTV%20Koop%204K%2C%20ik%20heb%20een%20vraag%20over%20een%20abonnement."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold text-[#25D366] hover:underline"

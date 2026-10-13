@@ -86,7 +86,7 @@ export const ApparatenPage: React.FC = () => {
             Stuur ons je model en de naam van je speler via WhatsApp. Onze klantenservice helpt je stap voor stap.
           </p>
           <WhatsAppButton
-            message="Hoi IPTV Koop 4K, ik heb hulp nodig bij de installatie op mijn apparaat. (ref: APPARATEN-hulp)"
+            message="Hoi IPTV Koop 4K, ik heb hulp nodig bij de installatie op mijn apparaat."
             context={{ page: '/apparaten/', ref: 'APPARATEN-hulp' }}
             variant="primary"
           >

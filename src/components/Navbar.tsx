@@ -73,10 +73,10 @@ export const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-1 sm:gap-2">
           <a
-            href={getWhatsAppUrl('Hoi IPTV Koop 4K, ik heb interesse in een abonnement. (ref: NAV-mobile-icon)')}
+            href={getWhatsAppUrl('Hoi IPTV Koop 4K, ik heb interesse in een abonnement.')}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => handleWhatsAppClick('Hoi IPTV Koop 4K, ik heb interesse in een abonnement. (ref: NAV-mobile-icon)', { page: pathname, ref: 'NAV-mobile-icon' }, e)}
+            onClick={(e) => handleWhatsAppClick('Hoi IPTV Koop 4K, ik heb interesse in een abonnement.', { page: pathname, ref: 'NAV-mobile-icon' }, e)}
             className="fx-press grid h-11 w-11 place-items-center rounded-full bg-[#25D366] shadow-[0_10px_22px_-10px_rgba(37,211,102,.8)] sm:hidden"
             aria-label="Bestel via WhatsApp"
           >
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
           </a>
           <div className="hidden sm:block">
             <WhatsAppButton
-              message="Hoi IPTV Koop 4K, ik heb interesse in een abonnement. (ref: NAV-bestel)"
+              message="Hoi IPTV Koop 4K, ik heb interesse in een abonnement."
               context={{ page: pathname, ref: 'NAV-bestel' }}
               variant="compact"
               className="whitespace-nowrap"
@@ -131,7 +131,7 @@ export const Navbar: React.FC = () => {
             ))}
             <div className="pt-2">
               <WhatsAppButton
-                message="Hoi IPTV Koop 4K, ik wil graag een abonnement. (ref: MOB-nav)"
+                message="Hoi IPTV Koop 4K, ik wil graag een abonnement."
                 context={{ page: pathname, ref: 'MOB-nav' }}
                 variant="primary"
                 fullWidth

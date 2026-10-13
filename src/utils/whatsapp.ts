@@ -1,10 +1,10 @@
 /**
  * WhatsApp utility & conversion tracking for IPTV Koop 4K
- * Strictly preserves the phone number (447577339206), pre-filled texts with (ref: CODE),
+ * Strictly preserves the phone number (447428914603), pre-filled texts (ref code only in GA4, not in the message),
  * and gtag/dataLayer tracking from the reference implementation.
  */
 
-export const WHATSAPP_PHONE_NUMBER = '447577339206';
+export const WHATSAPP_PHONE_NUMBER = '447428914603';
 const ATTRIBUTION_STORAGE_KEY = 'iptvkoop4k_source';
 
 /**
@@ -77,5 +77,5 @@ export function handleWhatsAppClick(
  */
 export function buildOrderMessage(tier: 'Standard' | 'Premium', months: number, devices: number, refCode: string): string {
   const deviceText = devices === 1 ? '1 apparaat' : `${devices} apparaten`;
-  return `Hoi, ik wil graag het ${tier}-abonnement van ${months} maanden voor ${deviceText}. (ref: ${refCode})`;
+  return `Hoi, ik wil graag het ${tier}-abonnement van ${months} maanden voor ${deviceText}.`;
 }

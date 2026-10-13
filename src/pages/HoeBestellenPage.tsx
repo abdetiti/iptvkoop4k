@@ -134,7 +134,7 @@ export const HoeBestellenPage: React.FC = () => {
             Druk op de knop: je bericht staat direct voor je klaar in WhatsApp.
           </p>
           <WhatsAppButton
-            message="Hoi IPTV Koop 4K, ik wil graag bestellen in 4 stappen. (ref: BESTELLEN-cta)"
+            message="Hoi IPTV Koop 4K, ik wil graag bestellen in 4 stappen."
             context={{ page: '/hoe-bestellen/', ref: 'BESTELLEN-cta' }}
             variant="primary"
           >

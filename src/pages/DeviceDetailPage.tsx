@@ -111,7 +111,7 @@ export const DeviceDetailPage: React.FC = () => {
             Stuur ons via WhatsApp de naam van je speler en eventuele melding. Onze Nederlandstalige helpdesk kijkt direct met je mee.
           </p>
           <WhatsAppButton
-            message={`Hoi IPTV Koop 4K, ik heb hulp nodig bij de installatie op mijn ${guide.shortTitle}. (ref: HANDLEIDING-${guide.slug})`}
+            message={`Hoi IPTV Koop 4K, ik heb hulp nodig bij de installatie op mijn ${guide.shortTitle}.`}
             context={{ page: `/apparaten/${guide.slug}/`, ref: `HANDLEIDING-${guide.slug}` }}
             variant="primary"
           >

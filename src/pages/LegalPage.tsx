@@ -70,7 +70,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ documentSlug }) => {
             </p>
           </div>
           <WhatsAppButton
-            message={`Hoi IPTV Koop 4K, ik heb een vraag over ${doc.title}. (ref: JURIDISCH-${doc.slug})`}
+            message={`Hoi IPTV Koop 4K, ik heb een vraag over ${doc.title}.`}
             context={{ page: location.pathname, ref: `JURIDISCH-${doc.slug}` }}
             variant="compact"
           >

@@ -69,7 +69,7 @@ export const OverOnsPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <WhatsAppButton
-              message="Hoi IPTV Koop 4K, ik heb een vraag over jullie dienst. (ref: OVERONS-chat)"
+              message="Hoi IPTV Koop 4K, ik heb een vraag over jullie dienst."
               context={{ page: '/over-ons/', ref: 'OVERONS-chat' }}
               variant="primary"
             >

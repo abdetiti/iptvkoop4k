@@ -348,7 +348,7 @@ export const FinalCta: React.FC = () => (
         </p>
         <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <WhatsAppButton
-            message="Hoi IPTV Koop 4K, ik wil graag IPTV kopen. (ref: HOME-cta)"
+            message="Hoi IPTV Koop 4K, ik wil graag IPTV kopen."
             context={{ page: 'home', ref: 'HOME-cta' }}
             variant="primary"
             className="min-h-[56px] w-full px-8 text-[17px] sm:w-auto"

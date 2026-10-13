@@ -12,7 +12,7 @@ export const ContactPage: React.FC = () => {
       desc: 'Informatie over IPTV Koop 4K en onze zenderpakketten.',
       icon: MessageSquare,
       ref: 'CONTACT-algemeen',
-      message: 'Hoi IPTV Koop 4K, ik heb een algemene vraag over jullie dienst. (ref: CONTACT-algemeen)',
+      message: 'Hoi IPTV Koop 4K, ik heb een algemene vraag over jullie dienst.',
     },
     {
       id: 'keuze' as const,
@@ -20,7 +20,7 @@ export const ContactPage: React.FC = () => {
       desc: 'Advies over looptijd (3, 6, 12 maanden), Standard vs Premium en aantal schermen.',
       icon: HelpCircle,
       ref: 'CONTACT-keuze',
-      message: 'Hoi IPTV Koop 4K, ik wil graag advies over het juiste abonnement voor mijn apparaten. (ref: CONTACT-keuze)',
+      message: 'Hoi IPTV Koop 4K, ik wil graag advies over het juiste abonnement voor mijn apparaten.',
     },
     {
       id: 'installatie' as const,
@@ -28,7 +28,7 @@ export const ContactPage: React.FC = () => {
       desc: 'Hulp bij de installatie op je Smart TV, Firestick, Android TV of ander apparaat.',
       icon: Wrench,
       ref: 'CONTACT-installatie',
-      message: 'Hoi IPTV Koop 4K, ik heb hulp nodig bij het instellen van mijn apparaat en mediaspeler. (ref: CONTACT-installatie)',
+      message: 'Hoi IPTV Koop 4K, ik heb hulp nodig bij het instellen van mijn apparaat en mediaspeler.',
     },
     {
       id: 'storing' as const,
@@ -36,7 +36,7 @@ export const ContactPage: React.FC = () => {
       desc: 'Vragen over buffering, inloggen, EPG-programmagids of een foutmelding.',
       icon: AlertTriangle,
       ref: 'CONTACT-storing',
-      message: 'Hoi IPTV Koop 4K, er werkt iets niet goed (buffering/inloggen/EPG). Kunnen jullie meekijken? (ref: CONTACT-storing)',
+      message: 'Hoi IPTV Koop 4K, er werkt iets niet goed (buffering/inloggen/EPG). Kunnen jullie meekijken?',
     },
   ];
 

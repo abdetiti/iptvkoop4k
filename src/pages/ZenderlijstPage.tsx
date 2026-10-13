@@ -125,7 +125,7 @@ export const ZenderlijstPage: React.FC = () => {
             Vraag direct via WhatsApp of jouw specifieke zender beschikbaar is in ons pakket.
           </p>
           <WhatsAppButton
-            message="Hoi IPTV Koop 4K, zit mijn zender of competitie in jullie pakket? (ref: ZENDERS-vraag)"
+            message="Hoi IPTV Koop 4K, zit mijn zender of competitie in jullie pakket?"
             context={{ page: '/zenderlijst/', ref: 'ZENDERS-vraag' }}
             variant="primary"
           >

@@ -72,7 +72,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       {/* Fixed bottom WhatsApp CTA for mobile */}
       <div className="block md:hidden fixed bottom-0 left-0 right-0 z-40 px-3 pt-2 pb-[calc(10px+env(safe-area-inset-bottom))] bg-white/85 backdrop-blur-xl border-t border-white shadow-[0_-10px_30px_-12px_rgba(14,21,38,0.25)]">
         <WhatsAppButton
-          message="Hoi IPTV Koop 4K, ik wil graag een abonnement. (ref: MOB-fixed-bar)"
+          message="Hoi IPTV Koop 4K, ik wil graag een abonnement."
           context={{ page: location.pathname, ref: 'MOB-fixed-bar' }}
           variant="fixed-mobile"
           fullWidth

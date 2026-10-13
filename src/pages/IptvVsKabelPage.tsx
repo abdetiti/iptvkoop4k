@@ -58,7 +58,7 @@ export const IptvVsKabelPage: React.FC = () => {
 
             <div>
               <WhatsAppButton
-                message="Hoi IPTV Koop 4K, ik wil graag overstappen naar IPTV. (ref: KABEL-iptv)"
+                message="Hoi IPTV Koop 4K, ik wil graag overstappen naar IPTV."
                 context={{ page: '/iptv-vs-kabel/', ref: 'KABEL-iptv' }}
                 variant="primary"
                 fullWidth

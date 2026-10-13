@@ -180,7 +180,7 @@ export const Hero: React.FC = () => {
             className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <WhatsAppButton
-              message="Hoi IPTV Koop 4K, ik wil graag IPTV kopen. (ref: HOME-hero)"
+              message="Hoi IPTV Koop 4K, ik wil graag IPTV kopen."
               context={{ page: 'home', ref: 'HOME-hero' }}
               variant="primary"
               className="min-h-[56px] px-7 text-[17px]"
