@@ -5,36 +5,16 @@
  */
 
 export const WHATSAPP_PHONE_NUMBER = '447428914603';
-const ATTRIBUTION_STORAGE_KEY = 'iptvkoop4k_source';
-
-/**
- * Capture source attribution (gclid or utm_source) from URL query
- */
-export function getAttributionSource(): string | null {
-  try {
-    if (typeof window === 'undefined') return null;
-    const params = new URLSearchParams(window.location.search);
-    const gclid = params.get('gclid');
-    const utmSource = params.get('utm_source');
-
-    if (gclid) {
-      sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, `G-${gclid.slice(-6)}`);
-    } else if (utmSource) {
-      sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, `U-${utmSource.slice(0, 12)}`);
-    }
-
-    return sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY);
-  } catch {
-    return null;
-  }
-}
 
 /**
  * Builds the official WhatsApp click URL.
  * The phone number is NEVER rendered as raw text in the UI.
  */
+/** Marque discrète du site à la fin du message (8K = 👍, Koop 4K = 🙂). */
+export const SITE_MARK = ' 🙂';
+
 export function getWhatsAppUrl(message: string): string {
-  return `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodeURIComponent(message + SITE_MARK)}`;
 }
 
 export interface WhatsAppTrackingContext {
@@ -65,11 +45,8 @@ export function handleWhatsAppClick(
     win.dataLayer = win.dataLayer || [];
     win.dataLayer.push({ event: 'whatsapp_click', ...payload });
   }
-
-  const attribution = getAttributionSource();
-  if (attribution && event?.currentTarget instanceof HTMLAnchorElement) {
-    event.currentTarget.href = getWhatsAppUrl(`${message} [${attribution}]`);
-  }
+  void message;
+  void event;
 }
 
 /**

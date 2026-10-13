@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { PaymentLogos } from './PaymentLogos';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export const Footer: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
             </div>
             <div className="pt-2">
               <a
-                href="https://wa.me/447428914603?text=Hoi%20IPTV%20Koop%204K%2C%20ik%20heb%20een%20vraag%20over%20een%20abonnement."
+                href={getWhatsAppUrl('Hoi IPTV Koop 4K, ik heb een vraag over een abonnement.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold text-[#25D366] hover:underline"
