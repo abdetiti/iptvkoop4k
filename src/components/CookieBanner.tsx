@@ -11,8 +11,18 @@ export const CookieBanner: React.FC = () => {
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('iptvkoop4k_cookie_consent', 'true');
+  const choose = (granted: boolean) => {
+    try {
+      localStorage.setItem('iptvkoop4k_cookie_consent', granted ? 'true' : 'essential');
+    } catch {}
+    if (granted) {
+      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted',
+      });
+    }
     setAccepted(true);
   };
 
@@ -29,13 +39,22 @@ export const CookieBanner: React.FC = () => {
           .
         </p>
       </div>
-      <button
-        type="button"
-        onClick={handleAccept}
-        className="fx-press min-h-[40px] shrink-0 rounded-full bg-[#0E1526] px-4 text-[13px] font-bold text-white"
-      >
-        Akkoord
-      </button>
+      <div className="flex shrink-0 items-center gap-1.5">
+        <button
+          type="button"
+          onClick={() => choose(false)}
+          className="fx-press min-h-[40px] rounded-full px-3 text-[13px] font-semibold text-slate-600 hover:text-[#0E1526]"
+        >
+          Weigeren
+        </button>
+        <button
+          type="button"
+          onClick={() => choose(true)}
+          className="fx-press min-h-[40px] rounded-full bg-[#0E1526] px-4 text-[13px] font-bold text-white"
+        >
+          Akkoord
+        </button>
+      </div>
     </div>
   );
 };
