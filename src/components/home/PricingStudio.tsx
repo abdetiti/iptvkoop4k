@@ -160,7 +160,7 @@ export const PricingStudio: React.FC = () => {
                     )}
                     <div className="relative flex items-center justify-between">
                       <h3 className="font-display text-2xl font-bold tracking-[-0.03em] text-[#0E1526]">{m} maanden</h3>
-                      {m === 12 && (
+                      {m === 12 && tier === 'Premium' && (
                         <span className="rounded-full px-3 py-1 text-[12px] font-bold text-white" style={{ background: 'var(--fx-accent)' }}>
                           Meest gekozen
                         </span>
