@@ -61,3 +61,24 @@ export const TIER_DESCRIPTIONS = {
     description: 'Een krachtigere server dan Standard.',
   },
 } as const;
+
+/**
+ * Contenu de chaque pakket (chiffres du fournisseur, confirmés par l'utilisateur le 11/10/2026,
+ * identiques à iptv8knederland.com).
+ */
+export const PACKAGE_CONTENT = {
+  Standard: { channels: '50.000+', titles: '140.000+' },
+  Premium: { channels: '80.000+', titles: '200.000+' },
+} as const;
+
+/** Inclus dans chaque pakket (mêmes faits que sur iptv8knederland.com). */
+export const INCLUDED_IN_EVERY_PACKAGE: string[] = [
+  'Nederlandse en internationale zenders',
+  'Live sport, films en series',
+  'Beeldkwaliteit van SD tot 4K',
+  'Programmagids (EPG)',
+  'Installatiehulp in het Nederlands via WhatsApp',
+];
+
+/** Avantage Premium. Règle de ce site : on ne parle pas de sport pour Premium. */
+export const PREMIUM_EXTRAS: string[] = ['Krachtigere Premium-server dan Standard'];
