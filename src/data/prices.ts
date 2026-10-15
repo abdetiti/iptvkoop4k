@@ -38,6 +38,16 @@ export const DEVICE_DISCOUNT_PERCENTAGES = {
   4: 30,
 } as const;
 
+/**
+ * Actie (comme sur iptv8knederland.com) : 12 maanden = 3 maanden gratis.
+ * Pour l'arrêter : bonusMonths: 0 (bandeau, badges, textes et message WhatsApp disparaissent).
+ */
+export const PROMO = { months: 12, bonusMonths: 3 } as const;
+
+export function promoActive(months: number): boolean {
+  return PROMO.bonusMonths > 0 && months === PROMO.months;
+}
+
 export function calculatePrice(tier: 'Standard' | 'Premium', devices: 1 | 2 | 3 | 4, months: 3 | 6 | 12): number {
   const base = BASE_PRICES[tier][months];
   if (devices === 1) {

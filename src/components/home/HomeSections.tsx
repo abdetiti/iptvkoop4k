@@ -344,7 +344,7 @@ export const FinalCta: React.FC = () => (
           lines={['Klaar om', <span className="fx-shimmer">IPTV te kopen?</span>]}
         />
         <p className="relative mx-auto mt-5 max-w-xl text-[16px] text-[#5b6478] sm:text-lg">
-          Standard, 12 maanden, 1 apparaat: €58,99. Stuur ons een bericht en je bestelling staat al klaar.
+          Standard, 12 maanden, 1 apparaat: €58,99, en nu krijg je er 3 maanden gratis bij. Stuur ons een bericht en je bestelling staat al klaar.
         </p>
         <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <WhatsAppButton

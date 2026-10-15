@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { PROMO } from '../../data/prices';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
 import { ArrowRight, MonitorSmartphone, Sparkles, Tv } from 'lucide-react';
@@ -205,6 +206,7 @@ export const Hero: React.FC = () => {
             <span className="fx-holo inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-[#0E1526]">
               <Sparkles className="h-4 w-4 text-[#FF5A1F]" />
               12 maanden vanaf <strong className="font-display text-[15px]">€58,99</strong>
+              {PROMO.bonusMonths > 0 && <span className="whitespace-nowrap font-bold text-[#FF5A1F]">+ {PROMO.bonusMonths} mnd gratis</span>}
             </span>
             <PaymentLogos size="sm" className="justify-start" />
           </motion.div>

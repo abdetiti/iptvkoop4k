@@ -6,7 +6,7 @@
  */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, Crown, Tv } from 'lucide-react';
+import { Check, Crown, Gift, Tv } from 'lucide-react';
 import {
   calculatePrice,
   formatPrice,
@@ -14,6 +14,8 @@ import {
   PACKAGE_CONTENT,
   INCLUDED_IN_EVERY_PACKAGE,
   PREMIUM_EXTRAS,
+  PROMO,
+  promoActive,
 } from '../../data/prices';
 import { buildOrderMessage } from '../../utils/whatsapp';
 import { WhatsAppButton } from '../WhatsAppButton';
@@ -76,6 +78,18 @@ export const PricingStudio: React.FC<{ source?: 'home' | 'abonnement'; showHeadi
           </div>
         )}
 
+        {PROMO.bonusMonths > 0 && (
+          <div
+            className="mb-6 flex items-center gap-3 rounded-2xl px-4 py-3 text-[15px] font-semibold text-white"
+            style={{ background: ORANGE }}
+          >
+            <Gift className="h-5 w-5 shrink-0" />
+            <span>
+              Actie: neem {PROMO.months} maanden en krijg er {PROMO.bonusMonths} maanden gratis bij.
+            </span>
+          </div>
+        )}
+
         {/* 1. Looptijd */}
         <fieldset>
           <legend className="mb-3 text-[15px] font-bold text-[#0E1526]">1. Looptijd</legend>
@@ -102,6 +116,11 @@ export const PricingStudio: React.FC<{ source?: 'home' | 'abonnement'; showHeadi
                     </span>
                   )}
                   <span className="font-display block text-[17px] font-bold leading-tight sm:text-xl">{d.months} maanden</span>
+                  {promoActive(d.months) && (
+                    <span className="mt-0.5 block text-[12px] font-bold sm:text-[13px]" style={{ color: ORANGE }}>
+                      + {PROMO.bonusMonths} gratis
+                    </span>
+                  )}
                 </button>
               );
             })}
@@ -177,7 +196,7 @@ export const PricingStudio: React.FC<{ source?: 'home' | 'abonnement'; showHeadi
                     <RollingPrice value={price} />
                   </div>
                   <p className={`mt-2 text-[15px] ${premium ? 'text-[#c3cadb]' : 'text-[#5b6478]'}`}>
-                    Totaal voor {months} maanden · {devText}
+                    Totaal voor {months} maanden{promoActive(months) ? ` + ${PROMO.bonusMonths} maanden gratis` : ''} · {devText}
                   </p>
                 </div>
 
