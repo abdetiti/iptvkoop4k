@@ -194,7 +194,7 @@ export const AndroidTvBoxPage: React.FC = () => {
         </section>
 
         {/* CTA */}
-        <section className="mt-16 rounded-[28px] bg-[#0E1526] p-7 sm:p-12 text-center text-white">
+        <div className="mt-16 rounded-[28px] bg-[#0E1526] p-7 sm:p-12 text-center text-white">
           <h2 className="font-display text-2xl sm:text-4xl font-bold">Kant-en-klaar kijken?</h2>
           <p className="mt-3 text-white/75 max-w-xl mx-auto">De box + {BOX.months} maanden Premium voor €{BOX.price}. Je bericht staat al klaar in WhatsApp.</p>
           <div className="mt-7 flex justify-center">
@@ -202,7 +202,7 @@ export const AndroidTvBoxPage: React.FC = () => {
               Bestel via WhatsApp
             </WhatsAppButton>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
