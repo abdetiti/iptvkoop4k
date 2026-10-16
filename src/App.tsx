@@ -29,6 +29,7 @@ import { FaqPage } from './pages/FaqPage';
 import { OverOnsPage } from './pages/OverOnsPage';
 import { ContactPage } from './pages/ContactPage';
 import { LegalPage } from './pages/LegalPage';
+import { AndroidTvBoxPage } from './pages/AndroidTvBoxPage';
 
 // Scroll to top helper on route change
 function ScrollToTop() {
@@ -103,6 +104,9 @@ export default function App() {
           <Route path="/apparaten" element={<ApparatenPage />} />
           <Route path="/apparaten/:deviceSlug/" element={<DeviceDetailPage />} />
           <Route path="/apparaten/:deviceSlug" element={<DeviceDetailPage />} />
+
+          <Route path="/android-tv-box/" element={<AndroidTvBoxPage />} />
+          <Route path="/android-tv-box" element={<AndroidTvBoxPage />} />
 
           <Route path="/hoe-bestellen/" element={<HoeBestellenPage />} />
           <Route path="/hoe-bestellen" element={<HoeBestellenPage />} />

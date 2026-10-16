@@ -39,6 +39,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-[#FF5A1F]">Home</Link></li>
               <li><Link to="/iptv-abonnement/" className="hover:text-[#FF5A1F]">IPTV Abonnementen</Link></li>
               <li><Link to="/zenderlijst/" className="hover:text-[#FF5A1F]">Zenderoverzicht</Link></li>
+              <li><Link to="/android-tv-box/" className="hover:text-[#FF5A1F]">Android TV Box</Link></li>
               <li><Link to="/hoe-bestellen/" className="hover:text-[#FF5A1F]">Hoe bestellen</Link></li>
               <li><Link to="/iptv-vs-kabel/" className="hover:text-[#FF5A1F]">IPTV vs Kabel</Link></li>
               <li><Link to="/veelgestelde-vragen/" className="hover:text-[#FF5A1F]">Veelgestelde vragen</Link></li>
@@ -76,6 +77,26 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Coin « TV Box » : offre box discrète, en bas de chaque page */}
+        <Link
+          to="/android-tv-box/"
+          className="mt-8 flex items-center gap-4 rounded-3xl border border-slate-200 bg-white p-3 sm:p-4 hover:border-[#FF5A1F]/50 transition-colors group"
+        >
+          <img
+            src="/images/android-tv-box/box-en-afstandsbediening-thumb.webp"
+            alt="Android 14 TV Box met afstandsbediening"
+            width={64}
+            height={64}
+            loading="lazy"
+            className="flex-none w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover"
+          />
+          <span className="flex-1 min-w-0">
+            <span className="block font-bold text-[#0E1526] text-sm sm:text-base">Liever een kant-en-klare box?</span>
+            <span className="block text-xs sm:text-sm text-slate-500">Android 14 TV Box + 12 maanden abonnement cadeau</span>
+          </span>
+          <span className="flex-none whitespace-nowrap text-sm font-bold text-[#FF5A1F] group-hover:translate-x-0.5 transition-transform"><span className="hidden sm:inline">Bekijk de box </span>→</span>
+        </Link>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <p>&copy; {new Date().getFullYear()} IPTV Koop 4K (www.iptvkoop4k.nl). Alle rechten voorbehouden.</p>

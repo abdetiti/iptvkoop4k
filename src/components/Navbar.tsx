@@ -5,10 +5,11 @@ import { Logo } from './Logo';
 import { WhatsAppButton, WhatsAppIcon } from './WhatsAppButton';
 import { getWhatsAppUrl, handleWhatsAppClick } from '../utils/whatsapp';
 
-const NAV: { to: string; label: string; mobileOnly?: boolean }[] = [
+const NAV: { to: string; label: string; mobileOnly?: boolean; badge?: string }[] = [
   { to: '/iptv-abonnement/', label: 'Abonnementen' },
   { to: '/zenderlijst/', label: 'Zenderlijst' },
   { to: '/apparaten/', label: 'Apparaten' },
+  { to: '/android-tv-box/', label: 'TV Box', badge: 'Nieuw' },
   { to: '/hoe-bestellen/', label: 'Hoe bestellen' },
   { to: '/iptv-vs-kabel/', label: 'IPTV vs kabel' },
   { to: '/veelgestelde-vragen/', label: 'FAQ' },
@@ -54,7 +55,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`fx-press relative rounded-full px-3 py-2 text-[14.5px] font-semibold transition-colors ${
+                className={`fx-press relative rounded-full px-2.5 min-[1340px]:px-3 py-2 text-[14.5px] font-semibold transition-colors ${
                   active ? 'text-white' : 'text-[#3b4558] hover:text-[#0E1526]'
                 }`}
               >
@@ -66,6 +67,7 @@ export const Navbar: React.FC = () => {
                   />
                 )}
                 <span className="relative z-10">{l.label}</span>
+                {l.badge && <span className="relative z-10 ml-1 hidden min-[1340px]:inline rounded-full bg-[#FF5A1F] px-1.5 py-0.5 text-[10px] font-extrabold uppercase leading-none text-white">{l.badge}</span>}
               </Link>
             );
           })}
@@ -126,6 +128,7 @@ export const Navbar: React.FC = () => {
                   }`}
                 >
                   {l.label}
+                  {l.badge && <span className="ml-2 rounded-full bg-[#FF5A1F] px-2 py-0.5 text-[11px] font-extrabold uppercase text-white">{l.badge}</span>}
                 </Link>
               </motion.div>
             ))}
